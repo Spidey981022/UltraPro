@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Assets/Style/style.css">
+    <title>Ultra Pro | Dashboard</title>
+</head>
+<body>
+<main>
+    <nav>
+        <div class="logo">
+            <h3>ULTRA PRO</h3>
+        </div>
+
+        <div class="search-dashboard">
+            <input type="text" placeholder="Search Dashboard Items">
+        </div>
+
+        <div id="nav-menu">
+            <div class="weather">
+                <p>Delhi</p>
+                <h4>32* Sunny</h4>
+            </div>
+            <div class="date-time">
+                <p>24-12-1990</p>
+                <h4>07:47 PM</h4>
+            </div>
+            <div class="dp">
+                <img src="https://i.pinimg.com/736x/d5/7e/60/d57e602cbd6924da7a61ff7dc466fa42.jpg" alt="">
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="side-section">
+        <div class="home">
+            <i class="ri-home-9-line"></i>
+        </div>
+        <div class="side-menu">
+            <div class="setting">
+                <i class="ri-settings-6-line"></i>
+            </div>
+            <div class="theme">
+                <i class="ri-sun-line"></i>
+<!--                <i class="ri-moon-clear-line"></i>-->
+            </div>
+        </div>
+    </section>
+
+    <section id="main-section">
+        <div class="cards">
+            <div class="todo card">
+                <b>ULTRA PRO</b> | TODO LIST
+                <p>Organize your daily tasks with ease. Create, manage, and track your to-do items so you can stay productive and never miss an important task.</p>
+                <i class="ri-login-circle-line"></i>
+            </div>
+            <div class="planner card">
+                <b>ULTRA PRO</b> | PLANNER
+                <p>Plan your day efficiently by scheduling tasks, setting priorities, and organizing your routine to make every day more productive and stress-free.</p>
+                <i class="ri-login-circle-line"></i>
+            </div>
+            <div class="motivation card">
+                <b>ULTRA PRO</b> | MOTIVATION
+                <p>Stay inspired with uplifting quotes and positive reminders that keep you focused, boost your confidence, and encourage you to achieve your goals.</p>
+                <i class="ri-login-circle-line"></i>
+            </div>
+            <div class="pomodoro card">
+                <b>ULTRA PRO</b> | POMODORO
+                <p>Improve your concentration using the Pomodoro Technique. Work in focused intervals with timed breaks to increase productivity and reduce mental fatigue.</p>
+                <i class="ri-login-circle-line"></i>
+            </div>
+            <div class="goals card">
+                <b>ULTRA PRO</b> | GOALS
+                <p>Set meaningful short-term and long-term goals, monitor your progress, and celebrate milestones to stay motivated and achieve consistent personal growth.</p>
+                <i class="ri-login-circle-line"></i>
+            </div>
+        </div>
+        <div class="full-cards" id="todo">
+            <div class="title">
+                <h3>TODO | Dashboard</h3>
+                <form>
+                    <input type="text" placeholder="Whats your task?">
+                </form>
+                <i class="ri-arrow-go-back-line"></i>
+            </div>
+            <div class="todo-grid">
+                <div class="new-task">
+                    <h3>NEW TASK</h3>
+                    <div class="tasks"></div>
+                </div>
+                <div class="imp-task">
+                    <h3>IMPORTANT TASK</h3>
+                    <div class="tasks-imp"></div>
+                </div>
+                <div class="comp-task">
+                    <h3>COMPLETED TASK</h3>
+                    <div class="tasks-comp"></div>
+                </div>
+                <div class="total-task">
+                    <h3>TOTAL TASK</h3>
+                    <div class="task-number">
+                        <h1>0</h1>
+                    </div>
+                </div>
+                <div class="del-task">
+                    <h3>DELETED TASK</h3>
+                    <div class="tasks-del"></div>
+                </div>
+            </div>
+        </div>
+        <div class="full-cards" id="planner">
+            <div class="title">
+                <h3>PLANNER | Dashboard</h3>
+                <i class="ri-arrow-go-back-line"></i>
+            </div>
+        </div>
+        <div class="full-cards" id="motivation">
+            <div class="title">
+                <h3>MOTIVATION | Dashboard</h3>
+                <i class="ri-arrow-go-back-line"></i>
+            </div>
+            <div class="quotes">
+                <div class="quote">
+                <h3>"Circumstances rule men; men do not rule circumstances."</h3>
+                </div>
+                <div class="author">
+                <h3>- Herodotus</h3>
+                </div>
+            </div>
+            <div class="refresh">
+                <i class="ri-refresh-line"></i>
+            </div>
+        </div>
+        <div class="full-cards" id="pomodoro">
+            <div class="title">
+                <h3>POMODORO | Dashboard</h3>
+                <i class="ri-arrow-go-back-line"></i>
+            </div>
+            <div class="timer-container">
+                <div class="timer">
+                    <p>25:00</p>
+                </div>
+                <div class="timer-media">
+                    <div class="play">
+                        <i class="ri-play-circle-line"></i>
+                    </div>
+                    <div class="pause">
+                        <i class="ri-pause-circle-line"></i>
+                    </div>
+                    <div class="stop">
+                        <i class="ri-stop-circle-line"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="full-cards" id="goals">
+            <div class="title">
+                <h3>GOALS | Dashboard</h3>
+                <i class="ri-arrow-go-back-line"></i>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="./Assets/Interactivity/script.js" type="module"></script>
+</body>
+</html>
