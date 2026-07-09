@@ -4,10 +4,12 @@ import open from './openCard.js';
 import pomodoro from './pomodoro.js';
 import todo from './todo.js';
 import motivation from './motivation.js';
+import weather from './weather.js';
 
 const taarik = document.querySelector('.date-time p');
 const samay = document.querySelector('.date-time h4');
 
+//SETTING DATE AT NAVBAR
 function currentDate(){
     let date = new Date();
     let day = date.getDate();
@@ -16,6 +18,7 @@ function currentDate(){
     taarik.textContent = day.toString().padStart(2,'0') + '-' + month.toString().padStart(2,"0") + '-' + year;
 }
 
+//SETTING TIME AT NAVBAR
 setInterval(()=>{
     let date = new Date();
     const hours24 = date.getHours();
@@ -36,3 +39,4 @@ open();
 pomodoro();
 todo();
 motivation();
+weather();
