@@ -5,6 +5,7 @@ export default function goBack() {
     const planner = document.getElementById('planner');
     const pomodoro = document.getElementById('pomodoro');
     const goals = document.getElementById('goals');
+    const setting = document.querySelector('#settings');
 
     goBack.forEach((item, index) => {
         item.addEventListener('click', () => {
@@ -22,6 +23,9 @@ export default function goBack() {
             }
             else if(index === 4){
                 goals.style.display = 'none';
+            }
+            else if(index === 5){
+                setting.style.display = 'none';
             }
         })
     })
