@@ -707,4 +707,101 @@ section#main-section {
             }
         }
     }
+
+    #settings {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        top: 50%;
+        left: 50%;
+        padding: var(--p-md);
+        transform: translate(-50%, -50%);
+        height: 90%;
+        width: 95%;
+        border: 1px solid var(--border-light);
+        background-color: var(--bg-light);
+        border-radius: 10px;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--s-2xl);
+            color: var(--text-light);
+
+            input {
+                width: 300px;
+                height: var(--s-2xl);
+                text-indent: var(--s-md);
+                background-color: var(--card-light);
+                color: var(--text-light);
+                border: none;
+                border-radius: 10px;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            i {
+                height: 40px;
+                width: 40px;
+                border: 1px solid var(--border-light);
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+            }
+        }
+
+        .weather-setting, .reset-account{
+            padding: var(--p-md);
+            color: var(--text-light);
+            margin: var(--s-md) 0;
+            h1{
+                margin: var(--s-md) 0;
+            }
+            hr{
+                margin: var(--s-md) 0;
+                width: 50%;
+                opacity: 0.1;
+            }
+            input{
+                border: none;
+                text-indent: var(--s-sm);
+                height: var(--s-2xl);
+                width: 200px;
+                border-radius: 5px;
+            }
+            input:focus{
+                outline: none;
+            }
+        }
+        .weather-setting {
+            button{
+                background-color: #007a00;
+                border: none;
+                color: var(--text-light);
+                height: var(--s-2xl);
+                width: 50px;
+                border-radius: 5px;
+            }
+            button:hover{
+                background-color: #149514;
+            }
+        }
+        .reset-account{
+            button {
+                background-color: #c83232;
+                border: none;
+                color: var(--text-light);
+                height: var(--s-2xl);
+                width: 200px;
+                border-radius: 5px;
+            }
+            button:hover {
+                background-color: #e30e0e;
+            }
+        }
+    }
 }

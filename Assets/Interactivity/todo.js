@@ -2,9 +2,10 @@ export default function todo(){
     let todoArr = JSON.parse(localStorage.getItem('todo')) ?? [];
 
     const tasks = document.querySelector('.tasks');
-    const delTasks = document.querySelector('.tasks-del');
+    // const delTasks = document.querySelector('.tasks-del');
     const form = document.querySelector('.title form');
     const taskDel = document.querySelector('.tasks-del');
+    const taskCheck = document.querySelector('.task-check');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -66,7 +67,6 @@ export default function todo(){
         delTodo.push(delArr);
         localStorage.setItem('delTodo', JSON.stringify(delTodo));
         //const deletedArr = JSON.parse(localStorage.getItem('delTodo'));
-        console.log(delTodo);
         renderDelete(delTodo);
         renderTodo(todoArr);
         }
