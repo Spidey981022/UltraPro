@@ -4,8 +4,9 @@ import open from './openCard.js';
 import pomodoro from './pomodoro.js';
 import todo from './todo.js';
 import motivation from './motivation.js';
-import weather from './weather.js';
+//import weather from './weather.js';
 import setting from './setting.js';
+import goals from './goals.js';
 
 const taarik = document.querySelector('.date-time p');
 const samay = document.querySelector('.date-time h4');
@@ -32,20 +33,6 @@ setInterval(()=>{
 
 currentDate();
 
-//RESETTING DATA
-const resetAccount = document.querySelector('.reset-account button');
-const reset = document.querySelector('.reset-account');
-resetAccount.addEventListener('click', ()=>{
-    localStorage.clear();
-    location.reload();
-    const para = document.createElement('p');
-    para.classList.add('reset-warning');
-    reset.appendChild(para);
-    para.textContent = 'ACCOUNT RESET SUCCESSFULLY';
-    para.style.marginTop = '10px';
-    para.style.color = 'Red';
-})
-
 
 
 goback();
@@ -54,5 +41,6 @@ open();
 pomodoro();
 todo();
 motivation();
-weather();
+//weather();
 setting();
+goals();

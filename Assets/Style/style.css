@@ -131,6 +131,15 @@ section#side-section{
         display: grid;
         place-items: center;
     }
+    .grid-nav{
+        display: flex;
+        flex-direction: column;
+        gap: var(--s-2xl);
+        align-items: center;
+        font-size: var(--s-2xl);
+        /*background-color: var(--border-light);*/
+        color: var(--text-light);
+    }
     .side-menu{
         display: flex;
         flex-direction: column;
@@ -662,7 +671,7 @@ section#main-section {
     }
 
     #goals {
-        display: none;
+        display: block;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -704,6 +713,59 @@ section#main-section {
                 border-radius: 50%;
                 display: grid;
                 place-items: center;
+            }
+        }
+
+        section{
+            padding: var(--p-md);
+            height: calc(100% - var(--s-2xl));
+            display: flex;
+            justify-content: space-between;
+            #goal-section {
+                /*border: 1px solid var(--border-light);*/
+                height: 100%;
+                width: 50%;
+                form input{
+                    width: 100%;
+                    height: var(--s-2xl);
+                    background-color: var(--card-light);
+                    border: none;
+                    border-radius: 5px;
+                    color: var(--text-light);
+                    text-indent: var(--s-md);
+                }
+                input:focus {
+                    outline: none;
+                }
+                .goal-input{
+                    width: 100%;
+                    height: calc(100% - var(--s-2xl));
+                    /*border: 1px solid white;*/
+                    .goal-done{
+                        margin: 10px 0;
+                        width: 100%;
+                        height: var(--s-2xl);
+                        background-color: var(--card-light);
+                        /*border: 1px solid white;*/
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 var(--p-md);
+                        color: var(--text-light);
+                        border-radius: 5px;
+                        .marker{
+                            width: 20%;
+                            /*border: 1px solid var(--border-light);*/
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+            #progress-section {
+                border: 1px solid var(--border-light);
+                height: 100%;
+                width: 50%;
             }
         }
     }
