@@ -671,7 +671,7 @@ section#main-section {
     }
 
     #goals {
-        display: block;
+        display: none;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -760,12 +760,47 @@ section#main-section {
                             justify-content: space-between;
                         }
                     }
+                    .goal-done.completed p {
+                        text-decoration: line-through;
+                        opacity: 0.6;
+                    }
                 }
             }
             #progress-section {
-                border: 1px solid var(--border-light);
+                /*border: 1px solid var(--border-light);*/
                 height: 100%;
                 width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .progress-circle{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid var(--border-light);
+                    height: 500px;
+                    width: 500px;
+                    border-radius: 50%;
+                    background: conic-gradient(limegreen 3.6deg, white 0deg);
+                }
+                .progress-circle::before{
+                    content: '';
+                    position: absolute;
+                    border: 1px solid var(--border-light);
+                    height: 450px;
+                    width: 450px;
+                    border-radius: 50%;
+                    background-color: var(--bg-light);
+                }
+                .progress-value{
+                    position: relative;
+                    color: var(--text-light);
+                    font-size: var(--s-2xl);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }
