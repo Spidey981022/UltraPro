@@ -1,10 +1,12 @@
 export default function goBack() {
+    const goBack = document.querySelectorAll('.ri-arrow-go-back-line');
+
     const todo = document.getElementById('todo');
     const motivation = document.getElementById('motivation');
-    const goBack = document.querySelectorAll('.ri-arrow-go-back-line');
     const planner = document.getElementById('planner');
     const pomodoro = document.getElementById('pomodoro');
     const goals = document.getElementById('goals');
+
     const setting = document.querySelector('#settings');
 
     goBack.forEach((item, index) => {

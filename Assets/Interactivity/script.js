@@ -7,6 +7,7 @@ import motivation from './motivation.js';
 //import weather from './weather.js';
 import setting from './setting.js';
 import goals from './goals.js';
+import sideNavigation from './sideNavigation.js';
 
 const taarik = document.querySelector('.date-time p');
 const samay = document.querySelector('.date-time h4');
@@ -33,8 +34,7 @@ setInterval(()=>{
 
 currentDate();
 
-
-
+sideNavigation();
 goback();
 getTheme();
 open();
