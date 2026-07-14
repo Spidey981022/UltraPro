@@ -23,7 +23,6 @@ export default function goals(){
         )
         localStorage.setItem('goals', JSON.stringify(goalsTodo));
         e.target[0].value = '';
-        countComp();
         progress();
         renderGoal(goalsTodo);
     })
@@ -47,7 +46,6 @@ export default function goals(){
         completedGoals.textContent = compGoal.toString();
         totalGoals.textContent = goalsTodo.length.toString();
     }
-    countComp();
     progress();
     renderGoal(goalsTodo);
 
@@ -66,7 +64,6 @@ export default function goals(){
     function deleteGoals(id){
         goalsTodo = goalsTodo.filter(item => item.id !== id);
         localStorage.setItem('goals', JSON.stringify(goalsTodo));
-        countComp();
         progress();
         renderGoal(goalsTodo);
     }
@@ -75,26 +72,23 @@ export default function goals(){
         const goal = goalsTodo.find((item) => item.id === id);
         goal.isCheck = !goal.isCheck;
         localStorage.setItem('goals', JSON.stringify(goalsTodo));
-        countComp();
         progress();
         renderGoal(goalsTodo);
-    }
-
-    function countComp(){
-        compGoal = goalsTodo.filter(item => item.isCheck).length;
     }
 
     function progress(){
         let endCount = 0;
         let startCount = 0;
 
-        endCount = Math.floor(((compGoal/goalsTodo.length)*100)/100*360);
+        compGoal = goalsTodo.filter(item => item.isCheck).length;
+
+        endCount =goalsTodo.length === 0 ? 0 : Math.floor((compGoal/goalsTodo.length)*360);
         let interval = setInterval(()=>{
             if(startCount === endCount){
                 clearInterval(interval);
             }
             startCount++;
             progressCircle.style.background = `conic-gradient(limegreen ${startCount}deg, white 0deg)`;
-        },5);
+        },10);
     }
 }

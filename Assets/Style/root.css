@@ -1,0 +1,59 @@
+:root{
+    /*BG-COLOR*/
+    --bg-light: #F2F3F5;
+    --bg-dark: #1E1F22;
+
+    /*CARD-COLOR*/
+    --card-light: #FFFFFF;
+    --card-dark: #2B2D31;
+
+    /*TEXT-COLOR*/
+    --text-light: #1E1F22;
+    --text-dark: #F2F3F5;
+    --time-light: #008000;
+    --time-dark: #ADFF2F;
+    --motivation-light: #FEBE10;
+    --motivattion-dark: #F0E68C;
+
+    /*BORDER-COLOR*/
+    --border-light: #DCDDDE;
+    --border-dark: #3A3D43;
+
+    /*PADDING*/
+    --p-sm: 4px;
+    --p-md: 8px;
+    --p-lg: 16px;
+    --p-xl: 32px;
+
+    /*SPACING AND SIZE*/
+    --s-sm: 4px;
+    --s-md: 8px;
+    --s-xl: 16px;
+    --s-2xl: 32px;
+    --s-3xl: 48px;
+    --s-4xl: 64px;
+}
+
+body.dark{
+    /*BG-COLOR*/
+    --bg-light: #1E1F22;
+    --bg-dark: #F2F3F5;
+
+    /*CARD-COLOR*/
+    --card-light: #2B2D31;
+    --card-dark: #FFFFFF;
+
+    /*TEXT-COLOR*/
+    --text-light: #F2F3F5;
+    --text-dark: #1E1F22;
+    ---time-dark: #008000;
+    --time-light: #ADFF2F;
+    --motivation-dark: #FEBE10;
+    --motivation-light: #F0E68C;
+
+    /*BORDER-COLOR*/
+    --border-light: #3A3D43;
+    --border-dark: #DCDDDE;
+
+    transition: 0.2s ease;
+}
