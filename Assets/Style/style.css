@@ -22,24 +22,18 @@ nav{
     .logo{
         color: var(--text-light);
     }
-    .search-dashboard{
+    .dynamicDay{
         height: var(--s-3xl);
         width: 400px;
-        /*border: 1px solid var(--border-light);*/
-        input{
-            height: 100%;
+        border: 1px solid var(--border-light);
+        border-radius: 15px;
+        img{
             width: 100%;
-            border: none;
-            border-bottom: 1px solid var(--border-light);
-            text-indent: var(--s-md);
-            font-size: var(--s-xl);
-            text-align: center;
-            /*outline: none;*/
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
         }
-        input:focus{
-            outline: none;
         }
-    }
     #nav-menu{
         display: flex;
         justify-content: space-between;
@@ -105,6 +99,7 @@ section#side-section{
 }
 
 section#main-section {
+    /*background: url("https://i.pinimg.com/1200x/16/be/c9/16bec9a832a1b90ca555c363c4837401.jpg");*/
     padding: var(--p-lg);
     position: absolute;
     bottom: 0;
@@ -456,7 +451,7 @@ section#main-section {
     }
 
     #planner {
-        display: block;
+        display: none;
         position: absolute;
         bottom: 0;
         right: 0;

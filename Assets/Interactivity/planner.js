@@ -1,12 +1,18 @@
 export default function planner() {
     const planList = document.querySelectorAll('.plan-list');
     const buttons = document.querySelectorAll('.btn');
+    const resetPlanner= document.querySelector('.reset-planner');
 
     let planArr = JSON.parse(localStorage.getItem('plansStorage')) ?? [];
 
+    resetPlanner.addEventListener('click', (e) => {
+        planArr = [];
+        localStorage.removeItem('plansStorage');
+        renderPlan();
+    })
+
     function renderPlan(){
         planList.forEach((list) => {
-            console.log(list);
             const time = list.dataset.time;
             const btn = list.querySelector('.btn');
 
@@ -87,7 +93,6 @@ export function calendar(){
 
         const totalDays  = new Date(year, month+1, 0).getDate();
         const dayOne = new Date(year, month, 1).getDay();
-        console.log(totalDays);
 
         const grid = document.querySelector('.date-grid');
         grid.innerHTML = '';
