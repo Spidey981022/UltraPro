@@ -8,7 +8,7 @@ import weather from './weather.js';
 import setting from './setting.js';
 import goals from './goals.js';
 import sideNavigation from './sideNavigation.js';
-import planner from './planner.js';
+import planner, {calendar} from './planner.js';
 
 const taarik = document.querySelector('.date-time p');
 const samay = document.querySelector('.date-time h4');
@@ -46,3 +46,4 @@ weather();
 setting();
 goals();
 planner();
+calendar();
